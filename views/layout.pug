@@ -15,7 +15,7 @@ html(lang="en-US")
       block headerLinks
 
     main
-      - let kinds in Object.keys(flash || {})
+      - let kinds = Object.keys(flash || {})
         if (kinds.length > 0)
           ul 
             each kind in kinds
