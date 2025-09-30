@@ -173,7 +173,7 @@ app.post("/lists/:todoListId/complete_all", (req, res, next) => {
     next(new Error("Not Found."));
   } else {
     todoList.markAllDone();
-    req.flash("success", "All todos have been marked as done.");
+    req.flash("flash success", "All todos have been marked as done.");
     res.redirect(`/lists/${todoListId}`);
   }
 })
