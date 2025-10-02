@@ -33,6 +33,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   secret: "this is not very secure",
+  store: new LokiStore({}),
 }));
 
 app.use(flash());
